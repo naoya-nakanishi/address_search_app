@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'areas/search'
+  get '/', to: "areas#index"
+  get 'areas/search', to: 'areas#search_get'
+  post 'areas/search', to: 'areas#search'
+  post 'areas', to: 'areas#create'
   # get 'areas/show'
   # get 'areas/new'
   # get 'areas/create'

@@ -10,6 +10,15 @@
     </tr>
   </thead>
   <tbody>
-
+    <% @areas.each do |area| %>
+        <tr>
+          <th><%= area.id %></th>
+          <td><%= area.zipcode %></td>
+          <td><%= area.prefcode %></td>
+          <td><%= area.address1 %><%= area.address2 %><%= area.address3 %></td>
+          <td><%= area.kana1 %><%= area.kana2 %><%= area.kana3 %></td>
+          <td><%= area.introduction %></td>
+        </tr>
+      <% end %>
   </tbody>
 </table>
